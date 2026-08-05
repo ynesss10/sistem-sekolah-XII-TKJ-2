@@ -1,9 +1,16 @@
-<div class="mb-8 flex items-end justify-between border-b border-[#E5E3DB] pb-5">
+@extends('layouts.app')
+
+@section('title', $title)
+
+@section('content')
+
+
+    <div class="mb-8 flex items-end justify-between border-b border-[#E5E3DB] pb-5">
             <div>
                 <p class="mb-1 text-[11px] uppercase tracking-[0.2em] text-[#A16207]">Tahun Ajaran 2025/2026</p>
                 <h1 class="font-display text-3xl font-semibold text-[#16213A]">Daftar Siswa</h1>
             </div>
-            <a href="" class="bg-[#16213A] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#26324f]">
+            <a href="{{ route('students.create') }}" class="bg-[#16213A] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#26324f]">
                 Catat Siswa Baru
             </a>
         </div>
@@ -40,9 +47,11 @@
                         </td>
                         <td class="px-5 py-4">
                             <div class="flex justify-end gap-4 text-xs font-medium">
-                                <a href="" class="text-[#16213A] hover:text-[#A16207]">Lihat</a>
-                                <a href="" class="text-[#16213A] hover:text-[#A16207]">Ubah</a>
-                                <form action="" method="POST"
+                                <a href="{{  route('students.show', ['id' => 1]) }}"
+                                    class="text-[#16213A] hover:text-[#A16207]">Lihat</a>
+                                <a href="{{  route('students.edit', ['id' => 1]) }}"
+                                    class="text-[#16213A] hover:text-[#A16207]">Ubah</a>
+                                <form action="{{  route('students.destroy', ['id' => 1]) }}" method="POST"
                                     onsubmit="return confirm('Hapus data siswa ini dari buku induk?')">
 
                                     <button type="submit" class="text-red-700 hover:text-red-900">Hapus</button>
@@ -55,3 +64,6 @@
                 </tbody>
             </table>
         </div>
+
+@endsection
+
