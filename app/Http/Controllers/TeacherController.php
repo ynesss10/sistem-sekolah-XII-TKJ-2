@@ -2,79 +2,69 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class TeacherController extends Controller
 {
-       public function index()
-     {
+    public function index()
+    {
         $title = 'Sistem Sekolah - Daftar Guru';
         $teachers = [
             [
-                'id;' => 1,
-                'nis' => '1001',
-                'name' => 'Andi',
-                'class' => 'XII TKJ 2',
-                'major' => 'TKJ',
+                'id' => 1,
+                'nip' => '198501012024',
+                'name' => 'Budi Santoso',
+                'gender' => 'Laki-Laki',
+                'subject' => 'Akuntansi Dasar',
+                'phone_number' => '081234560001',
+                'status' => 'Aktif',
             ],
             [
-                'id;' => 2,
-                'nis' => '1002',
-                'name' => 'Budi',
-                'class' => 'XII TKJ 1',
-                'major' => 'TKJ',
-            ],
+                'id' => 2,
+                'nip' => '198703152024',
+                'name' => 'Siti Aminah',
+                'gender' => 'Perempuan',
+                'subject' => 'Jaringan Komputer',
+                'phone_number' => '081234560002',
+                'status' => 'Aktif',
+            ]
         ];
-        return view('teachers.index' , [
+        return view ('teachers.index' ,  [
             'title' => $title,
             'teachers' => $teachers,
         ]);
     }
 
-    public function show(string $id)
-    {
-        return "Menampilkan guru dengan ID: {$id} ";
-    }
-
     public function create()
     {
-            $majors = [
-                [
-                    'id' => 1,
-                    'code' => 'AKL',
-                    'name' => 'Akuntansi dan Keuangan Lembaga',
-                    'description' => 'Program keahlian yang membekali murid dengan kompetensi pencatatan dan pelaporan keuangan.',
-                ],
-                [
-                    'id' => 2,
-                    'code' => 'TKJ',
-                    'name' => 'Teknik Komputer dan Jaringan',
-                    'description' => 'Program keahlian yang membekali murid dengan kompetensi instalasi, konfigurasi, dan pemeliharaan jaringan komputer.',
-                ],
-                [
-                    'id' => 3,
-                    'code' => 'BD',
-                    'name' => 'Bisnis Digital',
-                    'description' => 'Program keahlian yang membekali murid dengan kompetensi pemasaran dan pengelolaan bisnis berbasis digital.',
-                ],
-
-            ];
-        return "Menampilkan halaman tambah guru";
-    }
-
-    public function edit()
-    {
-        return "Menampilkan halaman edit guru ";
+        $title = 'Sistem Sekolah - Tambah Guru';
+        return view ('teachers.create', [
+            'title' => $title
+        ]);
     }
 
     public function store()
     {
-        return "Melakukan penambahan data guru ";
+        return "Melakukan penambahan data guru";
+    }
+
+    public function show(string $id)
+    {
+         $title = 'Sistem Sekolah - Detail Guru';
+        return view ('teachers.show', [
+            'title' => $title
+        ]);
+    }
+
+    public function edit()
+    {
+        $title = 'Sistem Sekolah - Edit Guru';
+        return view ('teachers.edit', [
+            'title' => $title
+        ]);
     }
 
     public function update()
     {
-        return "Melakukan perubahan data guru ";
+        return "Melakukan perubahan data guru";
     }
 
     public function destroy()
@@ -82,4 +72,3 @@ class TeacherController extends Controller
         return "Menghapus data guru";
     }
 }
-

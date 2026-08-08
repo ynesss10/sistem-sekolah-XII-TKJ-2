@@ -13,9 +13,9 @@
         <form action="" method="POST" class="space-y-6 border border-[#E5E3DB] bg-white p-8">
 
             <div>
-                <label for="nis"
-                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">NIS</label>
-                <input type="text" id="nis" name="nis" placeholder="Contoh: 2024010"
+                <label for="nip"
+                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">NIP</label>
+                <input type="text" id="nip" name="nip" placeholder="Contoh: 2024010"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
             </div>
 
@@ -33,6 +33,7 @@
                     Kelamin</label>
                 <select id="gender" name="gender"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
+                    <option value="">Pilih jenis kelamin</option>
                     <option value="L">Laki-laki</option>
                     <option value="P">Perempuan</option>
                 </select>
@@ -40,21 +41,19 @@
 
             <div>
                 <label for="major"
-                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Jurusan</label>
-                <select id="major" name="major"
+                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Mata Pelajaran</label>
+                <select id="subject" name="subject"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
-                  @foreach ( $majors as $major)
-                    <option value="{{ $major['id'] }}">{{ $major['name'] }}</option>
-    
-                  
-                  @endforeach
+                    <option value="">Pilih mata pelajaran</option>
+                    <option value="">Akuntansi Dasar</option>
+                    <option value="">Jaringan Komputer</option>
                 </select>
             </div>
 
             <div>
-                <label for="class"
-                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Kelas</label>
-                <input type="text" id="class" name="class" placeholder="Contoh: X AKL 1"
+                <label for="phone_number"
+                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Nomor HP</label>
+                <input type="text" id="phone_number" name="phone_number" placeholder="Contoh: 081234567890"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
             </div>
 
