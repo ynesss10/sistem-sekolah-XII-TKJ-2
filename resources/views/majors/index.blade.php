@@ -19,9 +19,11 @@
             <table class="w-full text-left text-sm">
                 <thead>
                     <tr class="border-b border-[#16213A] text-[11px] uppercase tracking-[0.15em] text-[#16213A]">
+                         <th class="w-14 px-5 py-3.5 font-semibold">No.</th>
                         <th class="w-14 px-5 py-3.5 font-semibold">Kode Jurusan.</th>
                         <th class="px-5 py-3.5 font-semibold">Nama Jurusan</th>
                         <th class="px-5 py-3.5 font-semibold">Deskripsi</th>
+                        <th class="px-5 py-3.5 font-semibold">Tindakan</th>
                     </tr>
                 </thead>
                 <tbody>

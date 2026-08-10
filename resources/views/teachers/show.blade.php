@@ -37,6 +37,15 @@
                 <div class="flex justify-between px-8 py-4">
                     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Nomor Telepon</dt>
                     <dd class="font-medium text-[#16213A]">081234560001</dd>
+
+                </div>
+                <div class="flex items-center justify-between px-8 py-4">
+                    <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Status</dt>
+                    <dd class="font-medium text-[#16213A]">
+                        <x-status-badge type="Aktif">
+                            Aktif
+                        </x-status-badge>
+                    </dd>
                 </div>
             </dl>
 
