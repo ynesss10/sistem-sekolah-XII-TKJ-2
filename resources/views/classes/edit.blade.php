@@ -31,8 +31,9 @@
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Jurusan</label>
                 <select id="major_id" name="major_id"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
-                    <option value="" selected>TKJ</option>
-                    <option value="">AKL</option>
+                    @foreach ($majors as $major)
+                        <option value="{{ $major['id'] }}">{{ $major['name'] }}</option>
+                    @endforeach
                 </select>
             </div>
 
@@ -41,8 +42,9 @@
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Wali Kelas</label>
                 <select id="teacher_id" name="teacher_id"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
-                    <option value="" selected>Budi Santoso</option>
-                    <option value="">Siti Aminah</option>
+                    @foreach ($teachers as $teacher)
+                        <option value="{{ $teacher['id'] }}">{{ $teacher['name'] }}</option>
+                    @endforeach
                 </select>
             </div>
 
