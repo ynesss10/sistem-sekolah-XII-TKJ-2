@@ -11,7 +11,7 @@ class StudentController extends Controller
         $title = 'Sistem Sekolah - Daftar Siswa';
         $students = [
             [
-                'id;' => 1,
+                'id' => 1,
                 'nis' => '1001',
                 'name' => 'Andi',
                 'class' => 'XII TKJ 2',
